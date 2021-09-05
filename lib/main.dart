@@ -1,3 +1,5 @@
+import 'package:egypt_news/presentation/screens/home_screen.dart';
+import 'package:egypt_news/presentation/themes/app_theme.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -5,9 +7,12 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp();
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      theme: AppTheme.lightTheme,
+      home: HomeScreen(),
+    );
   }
 }
