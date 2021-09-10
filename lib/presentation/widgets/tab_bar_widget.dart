@@ -19,7 +19,7 @@ class TabBarWidget extends StatelessWidget {
         labelStyle: const TextStyle(
           fontWeight: FontWeight.bold,
         ),
-        labelColor: AppColors.PRIMARY,
+        labelColor: Colors.black,
         unselectedLabelColor: AppColors.GREY,
         labelPadding: const EdgeInsetsDirectional.only(end: 16),
         physics: const BouncingScrollPhysics(),

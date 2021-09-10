@@ -7,7 +7,7 @@ class AppTheme {
   const AppTheme._();
 
   static ThemeData lightTheme = ThemeData(
-    primarySwatch: AppColors.PRIMARY_SWATCH,
+    primarySwatch: AppColors.PRIMARY,
     scaffoldBackgroundColor: AppColors.WHITE,
     highlightColor: Colors.transparent,
     splashColor: Colors.transparent,
@@ -20,7 +20,7 @@ class AppTheme {
       headline3: TextStyle(
         fontSize: 48.0,
         fontWeight: FontWeight.bold,
-        color: AppColors.PRIMARY,
+        color: Colors.black,
       ),
     ),
     appBarTheme: AppBarTheme(
