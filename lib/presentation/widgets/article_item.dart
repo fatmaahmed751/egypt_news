@@ -82,6 +82,7 @@ class ArticleItem extends StatelessWidget {
           ],
         ),
       ),
-    );
+      );
+
   }
 }

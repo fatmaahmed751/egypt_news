@@ -1,11 +1,9 @@
 class ApiConstants {
   ApiConstants._();
 
-  static const BASE_URL = 'https://www.breakingbadapi.com/api/';
+  static const BASE_URL = 'https://newsapi.org/v2/';
 
   // endpoints
-  static const CHARACTERS = BASE_URL + 'characters';
-  static const QUOTES = BASE_URL + 'quote';
-
+  static const TOP_HEADLINES = BASE_URL + 'top-headlines';
 
 }

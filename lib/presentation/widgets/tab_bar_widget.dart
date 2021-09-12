@@ -1,5 +1,4 @@
 import 'package:egypt_news/presentation/themes/app_colors.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class TabBarWidget extends StatelessWidget {
