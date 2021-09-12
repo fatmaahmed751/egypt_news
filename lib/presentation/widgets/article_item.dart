@@ -27,7 +27,7 @@ class ArticleItem extends StatelessWidget {
               decoration: BoxDecoration(
                 image: DecorationImage(
                   image:  NetworkImage(
-                    article.urlToImage,
+                    article.urlToImage ?? '',
                   ),
                   fit: BoxFit.cover,
                 ),
@@ -43,7 +43,7 @@ class ArticleItem extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      article.title,
+                      article.title ?? '',
                       style: Theme.of(context).textTheme.headline6!.copyWith(
                             fontWeight: FontWeight.bold,
                             color: AppColors.PRIMARY,
@@ -51,7 +51,7 @@ class ArticleItem extends StatelessWidget {
                     ),
                     const SizedBox(height: 4.0),
                     Text(
-                      article.description,
+                      article.description ?? '',
                       maxLines: 2,
                       overflow: TextOverflow.ellipsis,
                       style: Theme.of(context).textTheme.bodyText2,
@@ -67,7 +67,7 @@ class ArticleItem extends StatelessWidget {
                         ),
                         const SizedBox(width: 4.0),
                         Text(
-                          article.publishedAt,
+                          article.publishedAt ?? '',
                           style: Theme.of(context).textTheme.caption!.copyWith(
                                 fontWeight: FontWeight.normal,
                                 fontSize: 12.0,
