@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-
 import 'app_colors.dart';
 
 class AppTheme {
@@ -11,28 +10,28 @@ class AppTheme {
     scaffoldBackgroundColor: AppColors.WHITE,
     highlightColor: Colors.transparent,
     splashColor: Colors.transparent,
-    textTheme: TextTheme(
-      caption: TextStyle(
+    textTheme: const TextTheme(
+      caption: const TextStyle(
         fontSize: 14,
         fontWeight: FontWeight.w600,
         color: AppColors.GREY,
       ),
-      headline3: TextStyle(
+      headline3: const TextStyle(
         fontSize: 48.0,
         fontWeight: FontWeight.bold,
         color: Colors.black,
       ),
     ),
-    appBarTheme: AppBarTheme(
+    appBarTheme: const AppBarTheme(
       backwardsCompatibility: false,
       centerTitle: true,
       elevation: 0.0,
       backgroundColor: AppColors.WHITE,
-      systemOverlayStyle: SystemUiOverlayStyle(
+      systemOverlayStyle: const SystemUiOverlayStyle(
         statusBarColor: AppColors.WHITE,
         statusBarIconBrightness: Brightness.dark,
       ),
-      titleTextStyle: TextStyle(
+      titleTextStyle: const TextStyle(
         fontWeight: FontWeight.bold,
         color: AppColors.PRIMARY,
         fontSize: 20.0

@@ -4,11 +4,12 @@ import 'package:flutter/material.dart';
 
 class TabBarWidget extends StatelessWidget {
   final List<String> tabs;
-  final Function(int)? onTap;
+  final Function(int) onTap;
+
   const TabBarWidget({
     Key? key,
     required this.tabs,
-    this.onTap,
+    required this.onTap,
   }) : super(key: key);
 
   @override
