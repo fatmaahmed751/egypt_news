@@ -1,7 +1,6 @@
 import 'package:egypt_news/constants/app_constants.dart';
 import 'package:egypt_news/data/model/article_model.dart';
 import 'package:egypt_news/presentation/themes/app_colors.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class ArticleItem extends StatelessWidget {
@@ -9,14 +8,19 @@ class ArticleItem extends StatelessWidget {
 
   ArticleItem({required this.article});
 
-  void _navigateToDetailsScreen(BuildContext context) {
-    Navigator.pushNamed(context, AppConstants.NEWS_DETAILS_ROUTE, arguments: article);
-  }
+  void navigateToDetailsScreen(BuildContext context)
+  {
+    Navigator.pushNamed(
+       context, AppConstants.NEWS_DETAILS_ROUTE, arguments: article);
+}
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => _navigateToDetailsScreen(context),
+      onTap: () {
+         navigateToDetailsScreen(context);
+      },
+      // navigateTo(context,WebViewScreen(article['url']), );
       child: Container(
         height: 110,
         child: Row(
@@ -26,7 +30,7 @@ class ArticleItem extends StatelessWidget {
               height: 110.0,
               decoration: BoxDecoration(
                 image: DecorationImage(
-                  image:  NetworkImage(
+                  image: NetworkImage(
                     article.urlToImage ?? '',
                   ),
                   fit: BoxFit.cover,
@@ -44,17 +48,24 @@ class ArticleItem extends StatelessWidget {
                   children: [
                     Text(
                       article.title ?? '',
-                      style: Theme.of(context).textTheme.headline6!.copyWith(
-                            fontWeight: FontWeight.bold,
-                            color: AppColors.PRIMARY,
-                          ),
+                      style: Theme
+                          .of(context)
+                          .textTheme
+                          .headline6!
+                          .copyWith(
+                        fontWeight: FontWeight.bold,
+                        color: AppColors.PRIMARY,
+                      ),
                     ),
                     const SizedBox(height: 4.0),
                     Text(
                       article.description ?? '',
                       maxLines: 2,
                       overflow: TextOverflow.ellipsis,
-                      style: Theme.of(context).textTheme.bodyText2,
+                      style: Theme
+                          .of(context)
+                          .textTheme
+                          .bodyText2,
                     ),
                     const Spacer(),
                     Row(
@@ -68,10 +79,14 @@ class ArticleItem extends StatelessWidget {
                         const SizedBox(width: 4.0),
                         Text(
                           article.publishedAt ?? '',
-                          style: Theme.of(context).textTheme.caption!.copyWith(
-                                fontWeight: FontWeight.normal,
-                                fontSize: 12.0,
-                              ),
+                          style: Theme
+                              .of(context)
+                              .textTheme
+                              .caption!
+                              .copyWith(
+                            fontWeight: FontWeight.normal,
+                            fontSize: 12.0,
+                          ),
                         ),
                       ],
                     ),
@@ -82,7 +97,6 @@ class ArticleItem extends StatelessWidget {
           ],
         ),
       ),
-      );
-
+    );
   }
 }

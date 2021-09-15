@@ -4,7 +4,7 @@ class NewsModel {
   List<ArticleModel>? _articles;
   String? get status => _status;
   int? get totalResults => _totalResults;
-  List<ArticleModel>? get articles => _articles;
+  List<ArticleModel>? get articles => _articles;// how?
 
   NewsModel({
       String? status, 

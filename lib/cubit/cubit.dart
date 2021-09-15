@@ -19,7 +19,7 @@ void getBusiness({
   ).then((value) {
     print('errrrrrrrrrrrrrrrrror');
     print(value);
-    List<ArticleModel>?articles=NewsModel.fromJson(value).articles;
+    List<ArticleModel>?articles=NewsModel.fromJson(value.data).articles;
 
     emit(NewsGetArticlesSuccessState(articles!));
   }).catchError((error){
