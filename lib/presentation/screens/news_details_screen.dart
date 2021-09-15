@@ -10,7 +10,7 @@ class NewsDetailsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Egypt News'),
+        title: const Text('Details'),
       ),
       body: WebView(
       initialUrl: article.url,

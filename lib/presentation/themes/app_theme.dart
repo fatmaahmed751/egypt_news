@@ -22,19 +22,23 @@ class AppTheme {
         color: Colors.black,
       ),
     ),
-    appBarTheme: const AppBarTheme(
-      backwardsCompatibility: false,
+    appBarTheme: AppBarTheme(
       centerTitle: true,
       elevation: 0.0,
       backgroundColor: AppColors.WHITE,
       systemOverlayStyle: const SystemUiOverlayStyle(
         statusBarColor: AppColors.WHITE,
-        statusBarIconBrightness: Brightness.dark,
+        statusBarIconBrightness: Brightness.light,
       ),
-      titleTextStyle: const TextStyle(
-        fontWeight: FontWeight.bold,
+      iconTheme: IconThemeData(
         color: AppColors.PRIMARY,
-        fontSize: 20.0
+      ),
+      textTheme: TextTheme(
+        headline6: const TextStyle(
+          fontWeight: FontWeight.bold,
+          color: AppColors.PRIMARY,
+          fontSize: 20.0,
+        ),
       ),
     ),
   );
